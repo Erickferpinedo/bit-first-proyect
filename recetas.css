@@ -1,4 +1,9 @@
 /* General Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  color: #8B4513;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,11 +12,19 @@ body {
   background-color: #f3e5d8;
 }
 
+header, footer {
+  background-color: #255538;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .navbar-logo {
@@ -28,14 +41,6 @@ body {
 
 .navbar-menu li a {
   color: white;
-  text-decoration: none;
-}
-
-.navbar-button {
-  background-color: #333;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
   text-decoration: none;
 }
 
@@ -71,7 +76,7 @@ main {
   margin-top: 0;
 }
 
-.ingredients, .nutrition, .more-recipes {
+.ingredients, .more-recipes {
   background-color: #fff;
   padding: 1rem;
   border-radius: 5px;
@@ -83,11 +88,7 @@ main {
   margin-top: 0;
 }
 
-@media screen and (max-width: 1024px) {
-  main {
-      grid-template-columns: 1fr;
-  }
-}
+
 
 footer {
   background-color: #255538;
@@ -96,12 +97,107 @@ footer {
   position: relative;
   bottom: 0;
   width: 100%;
+  padding: 1rem;
 }
-.preparation-time {
-  width: 780px;
-height: 168px;
-background-color: pink;
-border-radius: 10px;
 
+/* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .recipe-details, .ingredients, .nutrition, .more-recipes {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-logo {
+    font-size: 1.2rem;
+  }
+
+  .recipe-details h1 {
+    font-size: 1.25rem;
+  }
+
+  .ingredients, .nutrition, .more-recipes {
+    padding: 0.5rem;
+  }
+}
+
+.ingredients {
+  background-color: #ffffff; /* White background for the card */
+  border-radius: 6px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Space inside the card */
+  width: 400px; /* Width as specified in your screenshot */
+}
+
+.ingredients h2 {
+  font-family: 'Merriweather', serif; /* Font style similar to the screenshot */
+  font-size: 24px; /* Font size for the heading */
+  color: #8B4513; /* Brown color for the heading */
+  margin-bottom: 15px; /* Space below the heading */
+}
+
+.ingredients ul {
+  list-style-type: disc; /* Bullet points for the list */
+  margin-left: 20px; /* Left margin to indent the list */
+  font-family: 'Merriweather', serif; /* Same font for list items */
+  font-size: 16px; /* Font size for list items */
+  color: #333; /* Text color */
+}
+
+.nutrition {
+  
+  padding: 20px; 
+  margin-top: 20px; 
+}
+
+.nutrition h2 {
+  font-family: 'Merriweather', serif; 
+  font-size: 24px; 
+  color: #8B4513; 
+  margin-bottom: 15px; 
+}
+
+.nutrition ul {
+  list-style-type: none; 
+  padding: 0; 
+  font-family: 'Merriweather', serif; 
+  font-size: 16px; 
+  color: #333; 
+}
+
+.nutrition ul li {
+  display: flex; 
+  justify-content: space-between; 
+  border-bottom: 1px solid #E0E0E0; 
+  padding: 10px 0; 
+}
+
+.nutrition ul li:last-child {
+  border-bottom: none; 
+}
+
+.nutrition ul li span {
+  font-weight: bold; 
+  color: #8B4513; 
 }
