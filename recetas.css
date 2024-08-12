@@ -1,9 +1,4 @@
 /* General Styles */
-
-h1, h2, h3, h4, h5, h6 {
-  color: #8B4513;
-}
-
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -12,38 +7,49 @@ body {
   background-color: #f3e5d8;
 }
 
-header, footer {
+/* Heading Styles */
+h1, h2, h3, h4, h5, h6 {
+  color: #8B4513;
+}
+
+/* Navbar Styles */
+.navbar {
   background-color: #255538;
-  color: white;
-  text-align: center;
-  padding: 1rem;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
   color: white;
+  font-size: 1.5em;
   text-decoration: none;
+  font-weight: bold;
 }
 
 .navbar-menu {
+  list-style: none;
   display: flex;
-  list-style-type: none;
-  gap: 1rem;
+  gap: 15px;
+  align-items: center;
 }
 
-.navbar-menu li a {
+.navbar-menu li {
+  margin: 0;
+}
+
+.navbar-menu a {
   color: white;
   text-decoration: none;
+  font-size: 1em;
 }
 
+/* Main Content Styles */
 main {
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -64,19 +70,7 @@ main {
   border-radius: 5px;
 }
 
-.recipe-details {
-  background-color: #fff;
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-details h1 {
-  font-size: 1.5rem;
-  margin-top: 0;
-}
-
-.ingredients, .more-recipes {
+.recipe-details, .ingredients {
   background-color: #fff;
   padding: 1rem;
   border-radius: 5px;
@@ -84,20 +78,85 @@ main {
   margin-bottom: 1rem;
 }
 
+.more-recipes {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.recipes-nutrition-content {
+  justify-content: center;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.recipe-details h1 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
 .ingredients h2, .nutrition h2, .more-recipes h2 {
   margin-top: 0;
 }
 
+/* Nutrition Section Styles */
+.nutrition {
+  padding: 20px;
+  margin-top: 20px;
+}
 
+.nutrition ul {
+  list-style-type: none;
+  padding: 0;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: #333;
+}
 
-footer {
+.nutrition ul li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #E0E0E0;
+  padding: 10px 0;
+}
+
+.nutrition ul li:last-child {
+  border-bottom: none;
+}
+
+.nutrition ul li span {
+  font-weight: bold;
+  color: #8B4513;
+}
+
+/* Image Styles */
+.fotos-aside {
+  height: 70px;
+  width: 70px;
+  border-radius: 10px;
+}
+
+/* Footer Styles */
+.footer {
   background-color: #255538;
-  color: white;
+  color: #fff;
+  padding: 5px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-item {
+  flex: 1 1 150px;
   text-align: center;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem;
+  margin: 10px 0;
 }
 
 /* Responsive Styles */
@@ -110,21 +169,27 @@ footer {
 @media screen and (max-width: 768px) {
   .navbar-container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .navbar-menu {
     flex-direction: column;
-    width: 100%;
-  }
-
-  .navbar-menu li {
     width: 100%;
     text-align: center;
   }
 
   .recipe-details, .ingredients, .nutrition, .more-recipes {
     margin-bottom: 1.5rem;
+  }
+
+  main, .recipe-content, aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .recipe-content {
+    width: 100%;
   }
 }
 
@@ -139,65 +204,17 @@ footer {
 
   .ingredients, .nutrition, .more-recipes {
     padding: 0.5rem;
+    text-align: center;
+    width: 90%;
   }
-}
 
-.ingredients {
-  background-color: #ffffff; /* White background for the card */
-  border-radius: 6px; /* Rounded corners */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  padding: 20px; /* Space inside the card */
-  width: 400px; /* Width as specified in your screenshot */
-}
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.ingredients h2 {
-  font-family: 'Merriweather', serif; /* Font style similar to the screenshot */
-  font-size: 24px; /* Font size for the heading */
-  color: #8B4513; /* Brown color for the heading */
-  margin-bottom: 15px; /* Space below the heading */
-}
-
-.ingredients ul {
-  list-style-type: disc; /* Bullet points for the list */
-  margin-left: 20px; /* Left margin to indent the list */
-  font-family: 'Merriweather', serif; /* Same font for list items */
-  font-size: 16px; /* Font size for list items */
-  color: #333; /* Text color */
-}
-
-.nutrition {
-  
-  padding: 20px; 
-  margin-top: 20px; 
-}
-
-.nutrition h2 {
-  font-family: 'Merriweather', serif; 
-  font-size: 24px; 
-  color: #8B4513; 
-  margin-bottom: 15px; 
-}
-
-.nutrition ul {
-  list-style-type: none; 
-  padding: 0; 
-  font-family: 'Merriweather', serif; 
-  font-size: 16px; 
-  color: #333; 
-}
-
-.nutrition ul li {
-  display: flex; 
-  justify-content: space-between; 
-  border-bottom: 1px solid #E0E0E0; 
-  padding: 10px 0; 
-}
-
-.nutrition ul li:last-child {
-  border-bottom: none; 
-}
-
-.nutrition ul li span {
-  font-weight: bold; 
-  color: #8B4513; 
+  .footer-item {
+    font-size: 0.9em;
+    text-align: center;
+  }
 }
