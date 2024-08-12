@@ -1,7 +1,9 @@
 body {
   background-color: #f3e5d8;
 }
-
+ h2, h3, h4, h5, h6 {
+  color: #8B4513;
+}
 .navbar {
   background-color: #255538; 
   padding: 10px;
