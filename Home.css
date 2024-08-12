@@ -3,7 +3,7 @@ body {
 }
 
 .navbar {
-  background-color: #255538; /* Green background color */
+  background-color: #255538; 
   padding: 10px;
   border-radius: 7px;
 }
@@ -38,9 +38,7 @@ body {
   font-size: 1em;
 }
 
-.navbar-menu a:hover {
-  text-decoration: underline;
-}
+
 
 .hero {
   background-image: url('images/food1.jpg');
@@ -71,7 +69,7 @@ body {
   transform: translate(-50%, -50%); 
 }
 
-/* Responsive adjustments for smaller screens */
+
 @media (max-width: 768px) {
   .hero-text {
     font-size: 1.5em;
@@ -89,8 +87,8 @@ body {
 
 .recipes-section {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
-  gap: 40px; /* Spacing between cards */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
   padding: 20px;
 }
 
@@ -100,6 +98,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color */
 }
 
 .recipe-card:hover {
@@ -128,17 +128,15 @@ body {
   margin: 5px 0;
 }
 
-/* Adjust grid to 2 columns on smaller screens */
 @media (max-width: 768px) {
   .recipes-section {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-/* Adjust grid to 1 column on very small screens */
 @media (max-width: 480px) {
   .recipes-section {
-    grid-template-columns: 1fr; /* 1 column on small screens */
+    grid-template-columns: 1fr; 
   }
 
   .recipe-content h3 {
@@ -149,6 +147,7 @@ body {
     font-size: 0.9em;
   }
 }
+
 
 
 .title-2 {
@@ -167,39 +166,38 @@ h2 {
 }
 
 .footer {
-  background-color: #333;
+  background-color: #255538 ;
   color: #fff;
-  padding: 20px;
+  padding: 5px;
 }
 
 .footer-container {
   display: flex;
-  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
-  justify-content: center; /* Center items horizontally */
-  gap: 20px; /* Space between items */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; 
 }
 
 .footer-item {
-  flex: 1 1 150px; /* Grow and shrink, with a base width of 150px */
-  text-align: center; /* Center text */
-  margin: 10px 0; /* Vertical spacing */
+  flex: 1 1 150px; 
+  text-align: center; 
+  margin: 10px 0; 
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; /* Stack items vertically on medium screens */
-    align-items: center; /* Center items horizontally */
+    flex-direction: row; 
+    align-items: center; 
   }
 
   .footer-item {
-    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
-    margin: 10px 0; /* Ensure vertical spacing is maintained */
+    flex: 1 1 auto; 
+    margin: 10px 0; 
   }
 }
 
 @media (max-width: 480px) {
   .footer-item {
-    font-size: 0.9em; /* Adjust text size for very small screens */
+    font-size: 0.9em; 
   }
 }
