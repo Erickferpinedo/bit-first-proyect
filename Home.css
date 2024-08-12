@@ -1,6 +1,12 @@
 body {
   background-color: #f3e5d8;
 }
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+}
+
  h2, h3, h4, h5, h6 {
   color: #8B4513;
 }
@@ -100,8 +106,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease-in-out;
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit text color */
+  text-decoration: none; 
+  color: inherit; 
 }
 
 .recipe-card:hover {
