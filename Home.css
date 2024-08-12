@@ -2,6 +2,204 @@ body {
   background-color: #f3e5d8;
 }
 
-nav {
-  background-color: green;
+.navbar {
+  background-color: #255538; /* Green background color */
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.navbar-menu li {
+  margin: 0;
+}
+
+.navbar-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.navbar-menu a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background-image: url('images/food1.jpg');
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-position: center; 
+  height: 500px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 15px;
+  position: relative; 
+}
+
+.hero-text {
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+  margin: 0 auto;
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: 1.5em;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: 1.2em;
+    padding: 10px;
+  }
+}
+
+
+.recipes-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  gap: 40px; /* Spacing between cards */
+  padding: 20px;
+}
+
+.recipe-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.recipe-card:hover {
+  transform: translateY(-10px);
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.recipe-content {
+  padding: 15px;
+}
+
+.recipe-content h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-content p {
+  font-size: 1em;
+  color: #777;
+  margin: 5px 0;
+}
+
+/* Adjust grid to 2 columns on smaller screens */
+@media (max-width: 768px) {
+  .recipes-section {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+/* Adjust grid to 1 column on very small screens */
+@media (max-width: 480px) {
+  .recipes-section {
+    grid-template-columns: 1fr; /* 1 column on small screens */
+  }
+
+  .recipe-content h3 {
+    font-size: 1.2em;
+  }
+
+  .recipe-content p {
+    font-size: 0.9em;
+  }
+}
+
+
+.title-2 {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-left: auto;
+  margin-top: auto;
+}
+
+h2 {
+  align-items: center;
+  text-align: center;
+  font-size:xx-large;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between items */
+}
+
+.footer-item {
+  flex: 1 1 150px; /* Grow and shrink, with a base width of 150px */
+  text-align: center; /* Center text */
+  margin: 10px 0; /* Vertical spacing */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Stack items vertically on medium screens */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer-item {
+    flex: 1 1 auto; /* Allow items to grow and shrink as needed */
+    margin: 10px 0; /* Ensure vertical spacing is maintained */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-item {
+    font-size: 0.9em; /* Adjust text size for very small screens */
+  }
 }
